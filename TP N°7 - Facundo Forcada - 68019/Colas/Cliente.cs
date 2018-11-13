@@ -10,7 +10,6 @@ namespace Colas
         public string Estado { get; protected set; }
         public decimal TiempoAtencion { get; protected set; }
         public decimal TiempoEnSistema { get; protected set; }
-        public double LitrosCombustible { get; protected set; }
 
         public Cliente(string nombre)
         {
@@ -53,13 +52,8 @@ namespace Colas
                 TiempoEnSistema += dias * 24 * 60;
             }
             Estado = "Saliendo";
-        }
-
-        public void SetLitros(double litros)
-        {
-            LitrosCombustible = litros;
-        }
-
+        } 
+        
         public decimal TiempoEspera()
         {
             return TiempoEnSistema - TiempoAtencion;

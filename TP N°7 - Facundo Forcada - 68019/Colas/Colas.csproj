@@ -54,7 +54,11 @@
     <ProjectReference Include="..\NumerosAleatorios\NumerosAleatorios.csproj">
       <Project>{788a574f-7b37-4f26-ad28-2a3f67f20b50}</Project>
       <Name>NumerosAleatorios</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

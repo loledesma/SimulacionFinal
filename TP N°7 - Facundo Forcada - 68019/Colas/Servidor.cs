@@ -75,8 +75,8 @@ namespace Colas
                 ClienteActual = cliente;
                 Estado = $"Atendiendo a {cliente.Nombre}";
                 cliente.ComenzarAtencion(hora, Nombre); 
-                if (bContinua)
-                    cliente.SetLitros(DistribucionLitros.Generar());
+                //if (bContinua)
+                //    cliente.SetLitros(DistribucionLitros.Generar());
                 ActualizarFinAtencion(hora);
             }
             else
@@ -113,8 +113,8 @@ namespace Colas
                     ClienteActual = Cola.ProximoCliente();
                     Estado = $"Atendiendo a {ClienteActual.Nombre}";
                     ClienteActual.ComenzarAtencion(ProximoFinAtencion.Value, Nombre);
-                    if (bContinua)
-                        ClienteActual.SetLitros(DistribucionLitros.Generar());
+                    //if (bContinua)
+                    //    ClienteActual.SetLitros(DistribucionLitros.Generar());
                     ActualizarFinAtencion(ProximoFinAtencion.Value);
                 }
             }            
@@ -130,7 +130,7 @@ namespace Colas
         public double CalcularDemoraSegunLitros()
         {
             double retorno = 0.0;
-            double litros = ClienteActual.LitrosCombustible;
+            //double litros = ClienteActual.LitrosCombustible;
             double h = 0.1;
             double k = 0.0;
             do
@@ -141,18 +141,18 @@ namespace Colas
             {
                 case 1:
                     // Metodo de Euler:
-                    double z1 = litros;
-                    double z2 = 0.0;
-                    double z3 = (-20 * z2) - (k * z1);
-                    double tiempo = 0.0;
-                    while (z1 > 1)
-                    {
-                        tiempo = tiempo + h;
-                        z1 = z1 + (h * z2);
-                        z2 = z2 + (h * z3);
-                        z3 = (-20 * z2) - (k * z1);
-                    }
-                    retorno = tiempo;
+                    //double z1 = litros;
+                    //double z2 = 0.0;
+                    //double z3 = (-20 * z2) - (k * z1);
+                    //double tiempo = 0.0;
+                    //while (z1 > 1)
+                    //{
+                    //    tiempo = tiempo + h;
+                    //    z1 = z1 + (h * z2);
+                    //    z2 = z2 + (h * z3);
+                    //    z3 = (-20 * z2) - (k * z1);
+                    //}
+                    //retorno = tiempo;
                     break;
                 case 2:
                     // Metodo de Runge Kutta

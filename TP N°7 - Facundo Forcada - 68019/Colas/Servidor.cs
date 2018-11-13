@@ -17,7 +17,7 @@ namespace Colas
         public int CantidadAtendidos { get; protected set; }
         public Boolean bContinua { get; protected set; }
         public IDistribucion DistribucionLitros { get; protected set; }
-        public int nTipoContinua { get; protected set; } 
+        public int nTipoContinua { get; protected set; }
         public IDistribucion DistribucionK { get; protected set; }
 
         public Servidor(IDistribucion atencion, ICola cola, string nombre, Boolean cont)

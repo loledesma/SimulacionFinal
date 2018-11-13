@@ -225,7 +225,7 @@ namespace Principal
         private void Simular()
         {
 
-            //aca manejar la simulacion
+            //aca manejar la simulacion del pro
         }
     }
 
